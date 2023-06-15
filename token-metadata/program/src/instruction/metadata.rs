@@ -897,3 +897,27 @@ impl InstructionBuilder for super::builders::Update {
         }
     }
 }
+
+
+/// Creates an CreateMetadataAccounts instruction
+#[allow(clippy::too_many_arguments)]
+/// #[deprecated(since="1.3.0", note="please use `create_metadata_accounts_v3` instead")]
+pub fn create_metadata_accounts_v2(
+    program_id: Pubkey,
+    metadata_account: Pubkey,
+    mint: Pubkey,
+    mint_authority: Pubkey,
+    payer: Pubkey,
+    update_authority: Pubkey,
+    name: String,
+    symbol: String,
+    uri: String,
+    creators: Option<Vec<Creator>>,
+    seller_fee_basis_points: u16,
+    update_authority_is_signer: bool,
+    is_mutable: bool,
+    collection: Option<Collection>,
+    uses: Option<Uses>,
+) -> Instruction {
+    unimplemented!()
+}
